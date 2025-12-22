@@ -405,6 +405,16 @@ let userCommands = {
             swag: swag == "swag"
         });
     },
+	  "dvdbounce": function() {
+        this.room.emit("dvdbounce", {
+            guid: this.guid
+        });
+    },
+    "stopdvd": function() {
+        this.room.emit("stopdvd", {
+            guid: this.guid
+        });
+    },
     "linux": "passthrough",
     "pawn": "passthrough",
     "bees": "passthrough",
