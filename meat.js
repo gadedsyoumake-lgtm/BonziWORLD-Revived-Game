@@ -353,6 +353,21 @@ let userCommands = {
             guid: this.guid,
         });
     },
+	    rage: function (text) {
+        this.room.emit("rage", {
+            guid: this.guid,
+        });
+    },
+    stoprage: function (text) {
+        this.room.emit("stoprage", {
+            guid: this.guid,
+        });
+    },
+    fly: function (text) {
+        this.room.emit("fly", {
+            guid: this.guid,
+        });
+    },
 	  "soundcloud": function(audRaw) {
         if (audRaw.includes("\"")) {return};
         if (audRaw.includes("'")) {return};
