@@ -200,6 +200,13 @@ let userCommands = {
             vid: vid
         });
     },
+	toppestjej: function () {
+        this.room.emit("talk", {
+            text: `<img src="img/misc/topjej.png">`,
+            say: "toppest jej",
+            guid: this.guid,
+        });
+    },
 	"video": function(vidRaw){
         var vid = this.private.sanitize ? sanitize(vidRaw) : vidRaw;
         this.room.emit("video", {
